@@ -18,12 +18,6 @@ const API_BASE_URL = 'https://api.spotify.com/v1';
 // Access token variable
 let accessToken = '';
 
-// Animation duration for visualizer
-const VISUALIZER_ANIMATION_DURATION = 150; // Duration in milliseconds
-
-// Variable to store the previous song title and artist
-let previousSongTitle = '';
-let previousArtistName = '';
 
 // Function to retrieve access token
 async function getAccessToken() {
@@ -70,7 +64,7 @@ async function getAccessToken() {
 function updateProgressBar(currentTime, duration) {
   const progressPercentage = (currentTime / duration) * 100;
   const cappedProgress = Math.min(progressPercentage, 100);
-  document.querySelector('.bar-top').style.width = `${cappedProgress}%`;
+  document.querySelector('.Progress-Top').style.width = `${cappedProgress}%`;
 }
 
 
@@ -113,3 +107,12 @@ async function fetchCurrentlyPlayingSong() {
     console.error('Error fetching currently playing song:', error);
   }
 }
+
+
+getAccessToken().then(() => {
+  setInterval(() => {
+     fetchCurrentlyPlayingSong().catch((error) => {
+       console.error('Error fetching currently playing song:', error);
+     });
+   }, 1000);
+});
