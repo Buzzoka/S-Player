@@ -2,7 +2,7 @@
 const CLIENT_ID = 'e0474666db6b4b43842c63a503e62a85';
 const CLIENT_SECRET = '5379f44c1a3f4eeea47497294a6a62c3';
 const REDIRECT_URI = 'https://buzzoka.github.io/S-Player/';
-const SCOPES = 'user-read-currently-playing';
+const SCOPES = 'user-read-currently-playing user-modify-playback-state';
 
 // Construct the authorization URL with the scope
 const AUTH_URL = `https://accounts.spotify.com/authorize?client_id=${CLIENT_ID}&redirect_uri=${encodeURIComponent(
