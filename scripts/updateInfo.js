@@ -67,6 +67,13 @@ function updateProgressBar(currentTime, duration) {
   document.querySelector('.Progress-Top').style.width = `${cappedProgress}%`;
 }
 
+// Helper function to format time as MM:SS
+function formatTime(time) {
+  const minutes = Math.floor(time / 60);
+  const seconds = Math.round(time % 60);
+
+  return `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+}
 
 // Function to fetch the currently playing song
 async function fetchCurrentlyPlayingSong() {
