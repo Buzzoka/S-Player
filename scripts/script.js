@@ -101,7 +101,7 @@ async function fetchCurrentlyPlayingSong() {
         document.getElementById('time-duration').textContent = formatTime(Math.floor(songDuration / 1000)); // Convert duration from milliseconds to seconds
 
         // Update update the progress bar
-        updateProgressBar(currentTime, duration)
+        updateProgressBar(progressMs, songDuration);
 
         // Update the album picture
         const albumImage = data.item.album.images[0].url; // Assuming the first image in the array is the desired size
