@@ -28,11 +28,11 @@
       <p id="time-duration" class="time-duration">00:00</p>
     </div>
     <div class="Player-Controls">
-      <i class='bx bx-skip-previous' ></i>
-      <div id="toggleButton" onclick="playPause()" class="play-pause play">
+      <i onclick="playPreviousTrack();" class='bx bx-skip-previous' ></i>
+      <div id="toggleButton" onclick="playPause(); togglePlayPause();" class="play-pause play">
         <i id="playPause" class='bx bx-pause' ></i>
       </div>
-      <i class='bx bx-skip-next'></i>
+      <i onclick="playNextTrack();" class='bx bx-skip-next'></i>
     </div>
   </div>
 

@@ -116,6 +116,90 @@ async function fetchCurrentlyPlayingSong() {
 }
 
 
+
+// Function to play the next track
+async function playNextTrack() {
+  const nextTrackUrl = `${API_BASE_URL}/me/player/next`;
+
+  try {
+    const response = await fetch(nextTrackUrl, {
+      method: 'POST',
+      headers: {
+        Authorization: `Bearer ${accessToken}`,
+      },
+    });
+
+    if (!response.ok) {
+      console.error('Failed to play the next track');
+    }
+  } catch (error) {
+    console.error('Error playing the next track:', error);
+  }
+}
+
+// Function to play the previous track
+async function playPreviousTrack() {
+  const previousTrackUrl = `${API_BASE_URL}/me/player/previous`;
+
+  try {
+    const response = await fetch(previousTrackUrl, {
+      method: 'POST',
+      headers: {
+        Authorization: `Bearer ${accessToken}`,
+      },
+    });
+
+    if (!response.ok) {
+      console.error('Failed to play the previous track');
+    }
+  } catch (error) {
+    console.error('Error playing the previous track:', error);
+  }
+}
+
+
+
+// Function to toggle play/pause for the currently active track
+async function togglePlayPause() {
+  const playerStateUrl = `${API_BASE_URL}/me/player`;
+
+  try {
+    // Fetch the current player state to determine if it's playing or paused
+    const response = await fetch(playerStateUrl, {
+      headers: {
+        Authorization: `Bearer ${accessToken}`,
+      },
+    });
+
+    if (response.ok) {
+      const data = await response.json();
+      const isPlaying = data.is_playing;
+
+      // If currently playing, pause the track; otherwise, play it
+      const playPauseUrl = isPlaying
+        ? `${API_BASE_URL}/me/player/pause`
+        : `${API_BASE_URL}/me/player/play`;
+
+      const playPauseResponse = await fetch(playPauseUrl, {
+        method: 'PUT',
+        headers: {
+          Authorization: `Bearer ${accessToken}`,
+        },
+      });
+
+      if (!playPauseResponse.ok) {
+        console.error('Failed to toggle play/pause');
+      }
+    } else {
+      console.error('Failed to fetch player state');
+    }
+  } catch (error) {
+    console.error('Error toggling play/pause:', error);
+  }
+}
+
+
+
 // FUNCTION to toggle between the play and pause and at the end it saves to local storage
 function playPause(){
   iconName = document.getElementById("playPause");
