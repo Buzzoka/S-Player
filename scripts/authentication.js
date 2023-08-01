@@ -1,7 +1,7 @@
 // Spotify API credentials
-const CLIENT_ID = '7669af05cc4b4b9da95d150b0863bb56';
-const CLIENT_SECRET = '2913fdab618a4209843042a696cd7f96';
-const REDIRECT_URI = 'https://buzzoka.github.io/S-Widget/';
+const CLIENT_ID = 'e0474666db6b4b43842c63a503e62a85';
+const CLIENT_SECRET = '5379f44c1a3f4eeea47497294a6a62c3';
+const REDIRECT_URI = 'https://buzzoka.github.io/S-Player/';
 const SCOPES = 'user-read-currently-playing';
 
 // Construct the authorization URL with the scope
