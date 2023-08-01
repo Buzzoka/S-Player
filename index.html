@@ -1,0 +1,56 @@
+<html lang="en">
+<head>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link href="https://api.fontshare.com/v2/css?f[]=general-sans@701,200,500,301,201,1,300,2,601,600,401,501,400,700&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="styles/Container.css">
+  <link rel="stylesheet" href="styles/General.css">
+  <link rel="stylesheet" href="styles/album.css">
+  <link rel="stylesheet" href="styles/progress.css">
+  <link rel="stylesheet" href="styles/controls.css">
+  <link rel="stylesheet" href="styles/info.css">
+  <title>Music-Player</title>
+</head>
+<body>
+  <div class="Music-Player">
+    <div class="Album">
+      <img id="album-image" src="assets/icons/music-Note.svg" alt="">
+    </div>
+    <div class="Player-Info">
+      <p id="Info-Title" class="Info-Title">Nothing is playing</p>
+      <p id="Info-Artist" class="Info-Artist">Start the music</p>
+    </div>
+    <div class="Progress-Bar">
+      <div id="Progress-Top" class="Progress-Top"></div>
+      <div id="Progress-Bot" class="Progress-Bot"></div>
+    </div>
+    <div class="Time-Stamps">
+      <p id="time-progress" class="time-progress">00:00</p>
+      <p id="time-duration" class="time-duration">00:00</p>
+    </div>
+    <div class="Player-Controls">
+      <i class='bx bx-skip-previous' ></i>
+      <div id="toggleButton" onclick="playPause()" class="play-pause play">
+        <i id="playPause" class='bx bx-pause' ></i>
+      </div>
+      <i class='bx bx-skip-next'></i>
+    </div>
+  </div>
+
+
+
+  <!-- Scripts -->
+
+  <!-- Script:For Spotify authentication -->
+  <script src="scripts/authentication.js"></script>
+
+  <!-- Script: for the player controls -->
+  <script src="scripts/player.js"></script>
+
+  <!-- Script: to update the information -->
+  <script src="scripts/updateInfo.js"></script>
+
+
+
+  <!-- Scripts -->
+</body>
+</html>

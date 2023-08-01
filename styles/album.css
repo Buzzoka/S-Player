@@ -1,0 +1,16 @@
+.Album {
+  height: 250px;
+  width: 250px;
+  background-color: #FFF9F7;
+  border-radius: 150px;
+  margin: 0;
+  margin-bottom: 60px;
+  box-shadow: 5px 0px 25px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+.Album img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

@@ -1,0 +1,54 @@
+.Player-Controls {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-content: space-around;
+  font-size: 40px;
+  gap: 50px;
+  color: #3A0043;
+}
+
+/* WHEN SOMETHING PAUSE PLAYING */
+.play-pause {
+  padding: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+  color: white;
+  background-color: #3A0043;
+  border-radius: 4px;
+  transition: transform 0.04s, box-shadow 0.15s, font-size 0.1s, opacity 0.15s, background-color 0.2s, border-radius 0.15s;
+  font-size: 40px;
+}
+
+.play-pause:active {
+  transform: scale(0.95);
+  background-color: #52006A;
+  border-radius: 8px;
+}
+
+/* WHEN SOMETHING START PLAYING */
+.play {
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+} 
+
+.pause {
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+.bx-skip-previous,
+.bx-skip-next {
+  transition: color 0.2s, transform 0.05s;
+}
+
+.bx-skip-next:active {
+  transform: translateX(2.5px);
+  color: #8a3097;
+}
+
+.bx-skip-previous:active {
+  transform: translateX(-2.5px);
+  color: #8a3097;
+}

@@ -1,0 +1,33 @@
+.Progress-Bar {
+  width: 340px;
+  height: 5px;
+  position: relative;
+}
+
+.Progress-Top,
+.Progress-Bot {
+  height: 100%;
+  border-radius: 100px;
+  background-color: #3A0043;
+}
+
+.Progress-Top {
+  position: absolute;
+  width: 0%;
+}
+
+.Progress-Bot {
+  opacity: 0.2;
+}
+
+
+
+.Time-Stamps {
+  width: 340px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+  margin-bottom: 20px;
+}

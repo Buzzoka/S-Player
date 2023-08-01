@@ -1,0 +1,11 @@
+.Music-Player {
+  font-family: 'General Sans', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 700px;
+  width: 400px;
+  background-color: #FFE9E3;
+  border-radius: 60px;
+}

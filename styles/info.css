@@ -1,0 +1,19 @@
+.Player-Info {
+  display: flex;
+  flex-direction: column;
+  font-weight: 700;
+  text-align: left;
+  align-self: flex-start;
+  margin-bottom: 60px;
+  margin-left: 30px;
+}
+
+.Info-Title {
+  font-size: 20px;
+  margin-bottom: -1;
+}
+
+.Info-Artist {
+  font-size: 15px;
+  opacity: 0.3;
+}
